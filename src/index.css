@@ -144,6 +144,13 @@ button:hover {
   .history-container p {
     font-size: 1rem;
   }
+
+  .history-container h3 {
+    font-size: 2rem;
+    text-align: center;
+    color: #ff758c;
+    margin-bottom: 20px;
+  }
 }
 
 

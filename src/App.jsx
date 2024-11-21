@@ -57,7 +57,13 @@ const App = () => {
             Their lips met in a gentle, hesitant kiss, the world around them dissolving into a blur of fluorescent lights and the faint hum of the store’s air conditioning. Ibrahim’s hand cupped Ivan’s cheek, his thumb grazing the sharp angle of his jaw, while Ivan’s free hand lightly rested on Ibrahim’s solid forearm.
           </p>
           <h2>Chapter 5: TO BE CONTINUED ... </h2>
+        
+          <h2 >New chapter every Wednesday </h2>
+          
+
         </section>
+
+        
 
         
       </main>

@@ -63,6 +63,13 @@ body {
   margin-bottom: 20px;
 }
 
+.history-container h3 {
+  font-size: 2rem;
+  text-align: center;
+  color: #ff758c;
+  margin-bottom: 20px;
+}
+
 .history-container p {
   font-size: 1.1rem;
   line-height: 1.8;
@@ -143,5 +150,10 @@ button:hover {
 
   .history-container p {
     font-size: 1rem;
+  }
+
+  .new_chapter_h3 {
+    font-size: 1.4rem;
+    background-color: #444;
   }
 }
