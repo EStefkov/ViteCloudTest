@@ -48,21 +48,24 @@ const Projects = () => {
   
 
   return (
-    <section className="py-10 px-5 bg-background">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-primary mb-6 text-center">Projects and Courses</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+    <section className="bg-white py-12 px-6">
+      <div className="max-w-5xl mx-auto">
+        <h2 className="text-4xl font-bold text-purple-600 text-center mb-8">Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="p-5 bg-white rounded shadow-md">
-              <h3 className="text-xl font-bold">{project.name}</h3>
-              <p className="text-sm mt-2">{project.description}</p>
+            <div
+              key={index}
+              className="p-6 bg-gray-100 rounded-lg shadow-md transition-transform hover:scale-105"
+            >
+              <h3 className="text-xl font-bold text-gray-800">{project.name}</h3>
+              <p className="text-gray-600 mt-2">{project.description}</p>
               <a
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary mt-4 inline-block"
+                className="text-indigo-500 mt-4 inline-block"
               >
-                View Project
+                View Project →
               </a>
             </div>
           ))}

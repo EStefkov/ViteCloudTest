@@ -1,11 +1,11 @@
 const Header = () => {
   return (
-    <header className="bg-gradient-to-r from-secondary to-primary text-white py-10 text-center">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-7xl font-bold">Emiliyan Stefkov</h1>
-        <p className="text-xl mt-4">Software Engineer</p>
-        <p className="mt-4">
-          Welcome to my portfolio! I am student who love to code.
+    <header className="bg-gradient-to-br from-indigo-500 to-purple-600 text-white py-16">
+      <div className="max-w-5xl mx-auto text-center">
+        <h1 className="text-6xl font-extrabold">Emiliyan Stefkov</h1>
+        <p className="text-2xl mt-4">Software Engineer & Problem Solver</p>
+        <p className="mt-6 text-lg">
+          Crafting modern solutions with a passion for coding and creativity.
         </p>
       </div>
     </header>
