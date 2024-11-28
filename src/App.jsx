@@ -8,11 +8,11 @@ import Skills from "./components/Skills";
 const App = () => {
   return (
     <>
-   <div className="font-sans">
+   <div className="font-sans" >
       <Header />
       <About />
       <Skills />
-      <Projects />
+      <Projects className="bg-gray-50"/>
       <Contact />
       <Footer/>
     </div>

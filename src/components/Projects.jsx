@@ -1,4 +1,3 @@
-
 const Projects = () => {
   const projects = [
     {
@@ -39,31 +38,32 @@ const Projects = () => {
     {
         name: 'QR_Menu_Generator',
         link: 'https://github.com/EStefkov/QR_Menu_Generator',
-        description: 'QR_Menu_Generator is a web application for digitizing restaurant menus using dynamically generated QR codes. It features a Java Spring backend with MySQL for data management and a React + Vite frontend for a fast and responsive user experience. As my fina-year project and first large-scale development, this showcases my ability to build practical solutions with modern technologies.' },
-
-
-
-    
+        description: 'QR_Menu_Generator is a web application for digitizing restaurant menus using dynamically generated QR codes. It features a Java Spring backend with MySQL for data management and a React + Vite frontend for a fast and responsive user experience. As my final-year project and first large-scale development, this showcases my ability to build practical solutions with modern technologies.'
+    },
   ];
-  
 
   return (
-    <section className="bg-white py-12 px-6">
-      <div className="max-w-5xl mx-auto">
-        <h2 className="text-4xl font-bold text-purple-600 text-center mb-8">Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <section className="bg-gray-50 py-12 px-6">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-4xl font-bold text-purple-600 text-center mb-12">Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="p-6 bg-gray-100 rounded-lg shadow-md transition-transform hover:scale-105"
+              className="relative bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow hover:scale-105 p-6 overflow-hidden border border-gray-200"
             >
-              <h3 className="text-xl font-bold text-gray-800">{project.name}</h3>
-              <p className="text-gray-600 mt-2">{project.description}</p>
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-400/10 via-white/5 to-transparent pointer-events-none"></div>
+              <h3 className="text-2xl font-semibold text-gray-800 mb-3">
+                {project.name}
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                {project.description}
+              </p>
               <a
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-indigo-500 mt-4 inline-block"
+                className="inline-block mt-auto bg-purple-600 text-white px-4 py-2 rounded-md text-sm font-medium shadow-md hover:bg-purple-700 transition-colors"
               >
                 View Project →
               </a>
