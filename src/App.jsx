@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -9,28 +10,34 @@ import Skills from "./components/Skills";
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
-  const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
-  };
+  const toggleTheme = () => setIsDarkMode(!isDarkMode);
 
   return (
     <div className={isDarkMode ? "dark" : ""}>
       <div className="font-sans bg-gray-50 dark:bg-gray-900 dark:text-white min-h-screen transition-colors duration-500">
-        {/* Theme Toggle Button */}
-        <div className="flex justify-end p-4">
-          <button
-            onClick={toggleTheme}
-            className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 dark:bg-gray-700 dark:hover:bg-gray-600 transition-colors duration-300"
-          >
-            {isDarkMode ? "Day Mode" : "Night Mode"}
-          </button>
+        {/* Navbar */}
+        <Navbar isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
+
+        {/* Sections */}
+        <div className="pt-16">
+          <section id="home">
+            <Header />
+          </section>
+          <section id="about">
+            <About />
+          </section>
+          <section id="skills">
+            <Skills />
+          </section>
+          <section id="projects">
+            <Projects />
+          </section>
+          <section id="contact">
+            <Contact />
+          </section>
         </div>
-        {/* Main Content */}
-        <Header />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
+
+        {/* Footer */}
         <Footer />
       </div>
     </div>
