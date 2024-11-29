@@ -43,27 +43,29 @@ const Projects = () => {
   ];
 
   return (
-    <section className="bg-gray-50 py-12 px-6">
+    <section className="bg-gray-50 dark:bg-gray-900 py-12 px-6">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-purple-600 text-center mb-12">Projects</h2>
+        <h2 className="text-4xl font-bold text-purple-600 dark:text-purple-400 text-center mb-12">
+          Projects
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="relative bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow hover:scale-105 p-6 overflow-hidden border border-gray-200"
+              className="relative bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-shadow hover:scale-105 p-6 overflow-hidden border border-gray-200 dark:border-gray-700"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-400/10 via-white/5 to-transparent pointer-events-none"></div>
-              <h3 className="text-2xl font-semibold text-gray-800 mb-3">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-400/10 via-white/5 to-transparent dark:from-purple-500/10 dark:via-black/10 dark:to-black/5 pointer-events-none"></div>
+              <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-3">
                 {project.name}
               </h3>
-              <p className="text-gray-600 text-sm leading-relaxed mb-4">
+              <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4">
                 {project.description}
               </p>
               <a
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-auto bg-purple-600 text-white px-4 py-2 rounded-md text-sm font-medium shadow-md hover:bg-purple-700 transition-colors"
+                className="inline-block mt-auto bg-purple-600 dark:bg-purple-500 text-white dark:text-gray-900 px-4 py-2 rounded-md text-sm font-medium shadow-md hover:bg-purple-700 dark:hover:bg-purple-600 transition-colors"
               >
                 View Project →
               </a>
