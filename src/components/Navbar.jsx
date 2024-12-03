@@ -12,7 +12,7 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
 
   const translations = {
     en: { Home: "Home", About: "About Me", Skills: "Skills", Projects: "Projects", Contact: "Contact" },
-    bg: { Home: "Начало", About: "За мен", Skills: "Умения", Projects: "Проекти", Contact: "Контакт" },
+    bg: { Home: "Начало", About: "За мен", Skills: "Умения", Projects: "Проекти", Contact: "Контакти" },
   };
 
   const translate = (key) => translations[language][key] || key;
