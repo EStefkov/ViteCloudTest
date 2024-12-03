@@ -20,7 +20,7 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
   return (
     <nav className="bg-indigo-600 dark:bg-gray-800 text-white px-4 py-3 fixed top-0 left-0 w-full z-50">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
-        {/* Бутон за мобилно меню */}
+        {/* Mobile menu button */}
         <button
           onClick={toggleMenu}
           className="text-lg focus:outline-none p-2 sm:hidden"
@@ -29,37 +29,30 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
           {isOpen ? <FaTimes className="w-6 h-6" /> : <FaBars className="w-6 h-6" />}
         </button>
 
-        {/* Странично меню за мобилни устройства */}
-        <div
-          className={`fixed top-0 left-0 h-full bg-indigo-600 dark:bg-gray-800 z-40 w-64 transform ${
-            isOpen ? "translate-x-0" : "-translate-x-full"
-          } transition-transform duration-300 ease-in-out sm:hidden`}
-        >
-          <button
-            onClick={closeMenu}
-            className="text-white text-2xl absolute top-4 right-4 focus:outline-none"
-            aria-label="Close menu"
+        {/* Dropdown menu for mobile */}
+        {isOpen && (
+          <div
+            className="absolute top-14 left-4 bg-indigo-600 dark:bg-gray-800 rounded-lg shadow-lg z-50 w-48 sm:hidden"
           >
-            <FaTimes />
-          </button>
-          <div className="flex flex-col mt-16 space-y-4 px-6">
-            {["Home", "About", "Skills", "Projects", "Contact"].map((section) => (
-              <Link
-                key={section}
-                to={section.toLowerCase()}
-                smooth={true}
-                duration={500}
-                offset={-70}
-                className="text-lg hover:text-indigo-300 transition-colors cursor-pointer"
-                onClick={closeMenu}
-              >
-                {translate(section)}
-              </Link>
-            ))}
+            <div className="flex flex-col py-2">
+              {["Home", "About", "Skills", "Projects", "Contact"].map((section) => (
+                <Link
+                  key={section}
+                  to={section.toLowerCase()}
+                  smooth={true}
+                  duration={500}
+                  offset={-70}
+                  className="px-4 py-2 text-sm hover:text-indigo-300 transition-colors cursor-pointer"
+                  onClick={closeMenu}
+                >
+                  {translate(section)}
+                </Link>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
-        {/* Навигационни линкове за десктоп */}
+        {/* Desktop links */}
         <div className="hidden sm:flex space-x-6">
           {["Home", "About", "Skills", "Projects", "Contact"].map((section) => (
             <Link
@@ -75,7 +68,7 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
           ))}
         </div>
 
-        {/* Бутоните за превключване на тема и език */}
+        {/* Theme and language toggles */}
         <div className="flex items-center space-x-4">
           <button
             onClick={toggleTheme}
