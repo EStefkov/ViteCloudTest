@@ -29,28 +29,28 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
           {isOpen ? <FaTimes className="w-6 h-6" /> : <FaBars className="w-6 h-6" />}
         </button>
 
-        {/* Dropdown menu for mobile */}
-        {isOpen && (
-          <div
-            className="absolute top-14 left-4 bg-indigo-600 dark:bg-gray-800 rounded-lg shadow-lg z-50 w-48 sm:hidden"
-          >
-            <div className="flex flex-col py-2">
-              {["Home", "About", "Skills", "Projects", "Contact"].map((section) => (
-                <Link
-                  key={section}
-                  to={section.toLowerCase()}
-                  smooth={true}
-                  duration={500}
-                  offset={-70}
-                  className="px-4 py-2 text-sm hover:text-indigo-300 transition-colors cursor-pointer"
-                  onClick={closeMenu}
-                >
-                  {translate(section)}
-                </Link>
-              ))}
-            </div>
-          </div>
-        )}
+       {/* Dropdown menu for mobile */}
+{isOpen && (
+  <div
+    className="absolute top-14 left-0 bg-indigo-600 dark:bg-gray-800 rounded-lg shadow-lg z-50 w-48 sm:hidden"
+  >
+    <div className="flex flex-col py-2">
+      {["Home", "About", "Skills", "Projects", "Contact"].map((section) => (
+        <Link
+          key={section}
+          to={section.toLowerCase()}
+          smooth={true}
+          duration={500}
+          offset={-70}
+          className="px-4 py-2 text-sm hover:text-indigo-300 transition-colors cursor-pointer"
+          onClick={closeMenu}
+        >
+          {translate(section)}
+        </Link>
+      ))}
+    </div>
+  </div>
+)}
 
         {/* Desktop links */}
         <div className="hidden sm:flex space-x-6">
