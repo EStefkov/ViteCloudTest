@@ -1,7 +1,19 @@
 import { FaJs, FaJava, FaReact, FaNode, FaGit, FaPython, FaHtml5 } from 'react-icons/fa';
 import { SiMysql, SiTailwindcss, SiSolidity, SiCsharp, SiCplusplus } from 'react-icons/si';
+import { useLanguage } from "./LanguageProvider";
 
 const Skills = () => {
+  const { language } = useLanguage();
+
+  const translations = {
+    en: {
+      title: "Skills",
+    },
+    bg: {
+      title: "Скилове",
+    },
+  };
+
   const skills = [
     { name: "JavaScript", icon: <FaJs />, color: "bg-gradient-to-r from-yellow-400 to-yellow-500" },
     { name: "Java", icon: <FaJava />, color: "bg-gradient-to-r from-orange-400 to-red-500" },
@@ -21,7 +33,7 @@ const Skills = () => {
     <section className="bg-indigo-50 dark:bg-gray-800 py-16 px-6">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-4xl font-bold text-indigo-500 dark:text-indigo-300 text-center mb-12">
-          Skills
+        {translations[language].title}
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-8">
           {skills.map((skill, index) => (
