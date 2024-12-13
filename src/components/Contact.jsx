@@ -18,6 +18,14 @@ const Contact = () => {
     },
   };
 
+  const socialLinks = [
+    { name: "Facebook", url: "https://www.facebook.com/d3evice" },
+    { name: "GitHub", url: "https://github.com/EStefkov" },
+    { name: "Instagram", url: "https://www.instagram.com/e_stefkov/" },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/emiliyan-stefkov-00b4a5247/" },
+    { name: "X (Twitter)", url: "https://x.com/Demonationnn" },
+  ];
+
   return (
     <section className="bg-indigo-50 dark:bg-gray-800 py-12 px-6">
       <div className="max-w-5xl mx-auto text-center">
@@ -32,6 +40,25 @@ const Contact = () => {
             {translations[language].emailLabel}: estefkov1996@gmail.com
           </p>
         </form>
+        <div className="mt-8">
+          <h3 className="text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mb-4">
+            {translations[language].socialsLabel}
+          </h3>
+          <ul className="flex flex-wrap justify-center gap-4">
+            {socialLinks.map((social) => (
+              <li key={social.name}>
+                <a
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-indigo-600 dark:text-indigo-400 hover:underline"
+                >
+                  {social.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );
