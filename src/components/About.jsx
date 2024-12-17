@@ -21,7 +21,7 @@ const About = () => {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
         <div className="flex justify-center">
           <img
-            src="/me.jpg"
+            src="/me.webp"
             alt="Emiliyan Stefkov"
             className="w-40 h-40 md:w-56 md:h-56 rounded-full border-4 border-indigo-600 shadow-lg transform hover:scale-110 transition-transform duration-300 object-cover"
           />
